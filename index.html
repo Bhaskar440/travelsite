@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelWorld - Explore Your Dreams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="c:\Users\hp\Downloads\vecteezy_beach-island-landscape-logo-beach-logo-design-vector_6626965.svg" alt="TravelWorld Logo" class="logo-img">
+                <span class="logo-text">TravelWorld</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#packages" class="packages-link">Packages</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+<!-- Hero Section with Video Background -->
+<section class="hero" id="home">
+    <div class="video-background">
+        <video autoplay muted loop id="heroVideo">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-mountains-and-forest-4236-large.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+    <div class="hero-content">
+        <h1 class="animate-text">Explore The World</h1>
+        <p class="animate-text-delay">Discover your next unforgettable journey</p>
+        <div class="search-container">
+            <div class="search-box">
+                <div class="search-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Where to?">
+                </div>
+                <div class="search-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="date" placeholder="When?">
+                </div>
+                <div class="search-item">
+                    <i class="fas fa-user-friends"></i>
+                    <select>
+                        <option value="">Travelers</option>
+                        <option value="1">1 Traveler</option>
+                        <option value="2">2 Travelers</option>
+                        <option value="3">3 Travelers</option>
+                        <option value="4+">4+ Travelers</option>
+                    </select>
+                </div>
+                <button class="search-btn pulse">
+                    <i class="fas fa-search"></i>
+                    Explore Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Popular Destinations -->
+    <section class="destinations" id="destinations">
+        <h2 class="section-title">Trending Destinations</h2>
+        <div class="destination-grid">
+            <!-- Maldives (keeping existing) -->
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&auto=format&fit=crop&q=80" alt="Maldives">
+                <div class="card-content">
+                    <h3>Maldives</h3>
+                    <p>Paradise on Earth with Overwater Villas</p>
+                    <div class="destination-details">
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                        <span><i class="fas fa-clock"></i> 6 Days</span>
+                        <span><i class="fas fa-users"></i> 2-4 People</span>
+                    </div>
+                    <div class="price">From $2,499</div>
+                    <button class="btn book-now" data-destination="maldives" data-price="2499">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Santorini (new image) -->
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&auto=format&fit=crop&q=80" alt="Santorini">
+                <div class="card-content">
+                    <h3>Santorini, Greece</h3>
+                    <p>Breathtaking Sunsets & Blue Domes</p>
+                    <div class="destination-details">
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                        <span><i class="fas fa-clock"></i> 5 Days</span>
+                        <span><i class="fas fa-users"></i> 2-6 People</span>
+                    </div>
+                    <div class="price">From $1,899</div>
+                    <button class="btn book-now" data-destination="santorini" data-price="1899">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Dubai (new image) -->
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop&q=80" alt="Dubai">
+                <div class="card-content">
+                    <h3>Dubai, UAE</h3>
+                    <p>Luxury Shopping & Desert Adventures</p>
+                    <div class="destination-details">
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                        <span><i class="fas fa-clock"></i> 7 Days</span>
+                        <span><i class="fas fa-users"></i> 2-8 People</span>
+                    </div>
+                    <div class="price">From $1,999</div>
+                    <button class="btn book-now" data-destination="dubai" data-price="1999">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Bali (new image) -->
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=800&auto=format&fit=crop&q=80" alt="Bali">
+                <div class="card-content">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Tropical Paradise & Cultural Heritage</p>
+                    <div class="destination-details">
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                        <span><i class="fas fa-clock"></i> 8 Days</span>
+                        <span><i class="fas fa-users"></i> 2-6 People</span>
+                    </div>
+                    <div class="price">From $1,299</div>
+                    <button class="btn book-now" data-destination="bali" data-price="1299">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Rome (new image) -->
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&auto=format&fit=crop&q=80" alt="Rome">
+                <div class="card-content">
+                    <h3>Rome, Italy</h3>
+                    <p>Ancient History & Italian Cuisine</p>
+                    <div class="destination-details">
+                        <span><i class="fas fa-star"></i> 4.6</span>
+                        <span><i class="fas fa-clock"></i> 6 Days</span>
+                        <span><i class="fas fa-users"></i> 2-8 People</span>
+                    </div>
+                    <div class="price">From $1,699</div>
+                    <button class="btn book-now" data-destination="rome" data-price="1699">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Phuket (new image) -->
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&auto=format&fit=crop&q=80" alt="Phuket">
+                <div class="card-content">
+                    <h3>Phuket, Thailand</h3>
+                    <p>Beach Paradise & Thai Hospitality</p>
+                    <div class="destination-details">
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                        <span><i class="fas fa-clock"></i> 7 Days</span>
+                        <span><i class="fas fa-users"></i> 2-6 People</span>
+                    </div>
+                    <div class="price">From $1,199</div>
+                    <button class="btn book-now" data-destination="phuket" data-price="1199">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Packages Section -->
+<section class="packages" id="packages">
+    <div class="section-header">
+        <h2>Curated Travel Packages</h2>
+        <p>Handpicked experiences for unforgettable journeys</p>
+    </div>
+
+    <div class="packages-filter">
+        <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-globe"></i>
+            All Packages
+        </button>
+        <button class="filter-btn" data-filter="luxury">
+            <i class="fas fa-crown"></i>
+            Luxury
+        </button>
+        <button class="filter-btn" data-filter="adventure">
+            <i class="fas fa-mountain"></i>
+            Adventure
+        </button>
+        <button class="filter-btn" data-filter="cultural">
+            <i class="fas fa-landmark"></i>
+            Cultural
+        </button>
+        <button class="filter-btn" data-filter="beach">
+            <i class="fas fa-umbrella-beach"></i>
+            Beach
+        </button>
+    </div>
+
+    <div class="packages-grid">
+        <!-- Package cards will be dynamically inserted here -->
+    </div>
+</section>    
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="booking-container">
+            <div class="booking-header">
+                <h2>Book Your Dream Vacation</h2>
+                <p>Complete the form below and start your journey</p>
+            </div>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-columns">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <select id="destination" required>
+                                <option value="">Select Destination</option>
+                                <!-- Options will be populated dynamically -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="package-type">Package Type</label>
+                            <select id="package-type" required>
+                                <option value="">Select Package</option>
+                                <option value="standard">Standard</option>
+                                <option value="premium">Premium</option>
+                                <option value="luxury">Luxury</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="check-in">Check In</label>
+                                <input type="date" id="check-in" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="check-out">Check Out</label>
+                                <input type="date" id="check-out" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="adults">Adults</label>
+                            <select id="adults" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="children">Children</label>
+                            <select id="children">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests</label>
+                            <textarea id="special-requests" rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-summary" id="bookingSummary">
+                    <!-- Summary will be updated dynamically -->
+                </div>
+                <button type="submit" class="btn btn-primary booking-submit">
+                    Proceed to Payment
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>TravelWorld is your gateway to extraordinary adventures and unforgettable experiences.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@travelworld.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TravelWorld. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

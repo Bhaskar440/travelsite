@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - TravelWorld</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="payment.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Header (same as main page) -->
+    <header class="header">
+        <!-- ... existing header code ... -->
+    </header>
+    <!-- Add this near the top of the payment container in payment.html -->
+<div class="back-to-destinations">
+    <a href="index.html#destinations" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Destinations
+    </a>
+</div> 
+    <main class="payment-page">
+        <div class="payment-container">
+            <div class="booking-summary">
+                <h2>Booking Summary</h2>
+                <div class="trip-details">
+                    <img src="images/paris.jpg" alt="Destination" id="tripImage">
+                    <div class="trip-info">
+                        <h3 id="destinationName">Paris, France</h3>
+                        <p id="tripDates">Oct 15 - Oct 22, 2024</p>
+                        <p id="guestCount">2 Adults, 1 Child</p>
+                    </div>
+                </div>
+                <div class="price-breakdown">
+                    <div class="price-row">
+                        <span>Base Price</span>
+                        <span id="basePrice">$1,200</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Taxes & Fees</span>
+                        <span id="taxes">$240</span>
+                    </div>
+                    <div class="price-row total">
+                        <span>Total</span>
+                        <span id="totalPrice">$1,440</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-form-container">
+                <h2>Payment Details</h2>
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label for="cardholder-name">Cardholder Name</label>
+                        <input type="text" id="cardholder-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-element">Credit or Debit Card</label>
+                        <div id="card-element"></div>
+                        <div id="card-errors" role="alert"></div>
+                    </div>
+                    <div class="save-card">
+                        <input type="checkbox" id="save-card">
+                        <label for="save-card">Save card for future payments</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary payment-button">
+                        <span class="button-text">Pay $1,440</span>
+                        <div class="spinner hidden"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as main page) -->
+    <footer class="footer">
+        <!-- ... existing footer code ... -->
+    </footer>
+
+    <script src="payment.js"></script>
+</body>
+</html>
